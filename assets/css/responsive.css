@@ -1,0 +1,211 @@
+/* Tablet and Mobile */
+@media (max-width: 1023px) {
+    .hide-m-t{
+        display: none;
+    }
+    
+    .search__cart-list{
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 644px) /2 );
+    }
+    .header{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    .search__cart-list::before{
+        display: none;
+    }
+    .content{
+        margin-top: calc(var(--header-height) + var(--sort-bar-height));
+    }
+    .sort-bar{
+        display: flex;
+    }
+    .search__cart-list,
+    .search__bar{
+        z-index: 3;
+    }
+}
+
+/* Tablet */
+@media (max-width:1023px) and (min-width:740px){
+    .hide-t{
+        display: none;
+    }
+    .search__cart {
+        width: 70px;
+        text-align: right;
+    }
+    :root{
+        --header-height:68px;
+        --nav-height: 0px;
+    }
+}
+
+/* Mobile */
+@media (max-width:739px){
+    .hide-m{
+        display: none;
+    }
+    :root{
+        --header-height:54px;
+        --nav-height: 0px;
+    }
+    .search{
+        justify-content: space-between;
+        margin: 0 20px 0 15px;
+    }
+    .search__mobile{
+        display: block;
+        padding:4px 10px;
+        cursor: pointer;
+    }   
+
+    .search__mobile-icon{
+        font-size: 2.4rem;
+        color:var(--while-color);
+    }
+    .search__logo{
+        width: unset;
+    }
+    .search__cart{
+        width:unset;
+    }
+    .search__logo-a{
+        display: block;
+        line-height:0;
+    }
+    .search__bar{
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: 48px;
+        padding: 0 20px;
+        animation: Mobile-appear linear 0.3s;
+        display: none;
+    }
+    
+    .search__mobile-ip:checked ~ .search__bar{
+        display: flex;
+    }
+   
+    @keyframes  Mobile-appear{
+        from{
+            top: calc(var(--header-height) / 2);
+            opacity: 0;
+        }
+        to{
+            top: var(--header-height);
+            opacity: 1;
+        }
+    }
+    .search__history{
+        position: fixed;
+        top: calc( var(--header-height) + var(--sort-bar-height));
+        width: 100%;
+        box-shadow: 0 1px 2px #ddd;
+
+    }
+    .search__history{
+        padding-left: 20px;
+    }
+    .pagination{
+        padding-left: 0;
+        margin: 15px 0 20px 0;
+        /* display: none; */
+
+    }
+    .pagination__item{
+        margin: 0 10px;
+    }
+    .pagination__a{
+        font-size: 1.6rem;
+    }
+    .pagination__item.pagination__item--active{
+        padding: 0;
+    }
+    .product__wrap{
+        padding: 0 5px;
+    }
+    /* Category mobile */
+    
+    .category-mobile{
+        display: block;
+    }
+    .category-mobile__list{
+        display: flex;
+        padding-left: 0;
+        list-style: none;
+        overflow-x: auto;
+        max-width: 100%;
+    }
+    .category-mobile__list::-webkit-scrollbar{
+        display: none;
+    }
+    .category-mobile__item{
+        flex-shrink: 0;
+        margin: 6px;
+    }
+    .category-mobile__item:nth-of-type(3n) .category-mobile__link{
+        background: rgb(139, 223, 139);
+    }
+    .category-mobile__item:nth-of-type(3n+1) .category-mobile__link{
+        background: rgb(146, 176, 228);
+    }
+    .category-mobile__item:nth-of-type(3n+2) .category-mobile__link{
+        background: rgb(230, 235, 146);
+    }
+    .category-mobile__link{
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 1.4rem;
+        line-height: 2rem;
+        height: 40px;
+        width: 110px;
+        /* không set height width thì scroll được??? có thể thay bằng padding */
+       padding: 0 6px;
+        display: block;
+        text-align: center;
+        border-radius: 5px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .content{
+        padding-top:0;
+    }
+    .search__logo-img{
+        width: 120px;
+    }
+    .footer-padding-mobile{
+        padding: 0 12px;
+    }
+    .search__cart-wrap{
+        position: relative;
+        top: 6px;
+    }
+    .footer__header{
+        text-align: center;
+    }
+    .footer__item-a{
+        justify-content: center;
+    }
+    .footer__app{
+        justify-content: center;
+    }
+    .footer__down-app a{
+        padding:4px 2px;
+    }
+}
